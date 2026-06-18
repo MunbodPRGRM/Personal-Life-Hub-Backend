@@ -5,6 +5,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/todos', require('./routes/todos'));
 
 // Global error handler
 app.use(require('./middlewares/errorHandler'));
