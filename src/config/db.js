@@ -8,6 +8,9 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
+  // คืนค่าคอลัมน์ DATE เป็น string "YYYY-MM-DD" ตรงๆ ไม่แปลงเป็น Date object
+  // ป้องกันวันที่เพี้ยน 1 วันจากการ shift timezone (UTC) ตอน serialize JSON
+  dateStrings: ['DATE'],
 });
 
 module.exports = pool;
