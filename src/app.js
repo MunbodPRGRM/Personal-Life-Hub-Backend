@@ -9,6 +9,7 @@ app.use('/api/todos', require('./routes/todos'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/goals', require('./routes/goals'));
+app.use('/api/transactions', require('./routes/transactions'));
 
 // Global error handler
 app.use(require('./middlewares/errorHandler'));
